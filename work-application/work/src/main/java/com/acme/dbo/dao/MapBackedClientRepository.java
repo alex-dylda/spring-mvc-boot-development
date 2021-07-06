@@ -1,12 +1,14 @@
 package com.acme.dbo.dao;
 
 import com.acme.dbo.domain.Client;
+import org.springframework.stereotype.Repository;
 
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
+@Repository
 public class MapBackedClientRepository implements ClientRepository {
     private Map<Integer, Client> clients = new HashMap<>();
 

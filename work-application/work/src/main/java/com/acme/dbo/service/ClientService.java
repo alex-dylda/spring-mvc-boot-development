@@ -2,9 +2,11 @@ package com.acme.dbo.service;
 
 import com.acme.dbo.dao.ClientRepository;
 import com.acme.dbo.domain.Client;
+import org.springframework.stereotype.Service;
 
 import java.util.Collection;
 
+@Service
 public class ClientService {
     private ClientRepository clients;
 
