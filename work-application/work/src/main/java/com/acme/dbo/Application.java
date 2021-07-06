@@ -3,13 +3,14 @@ package com.acme.dbo;
 import com.acme.dbo.controller.ClientController;
 import com.acme.dbo.domain.Client;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.util.Scanner;
 
 public class Application {
     public static void main(String[] args) {
-        ApplicationContext context = new ClassPathXmlApplicationContext("application-config.xml");
+        ApplicationContext context = new AnnotationConfigApplicationContext(ClientController.class);
         ClientController controller = context.getBean(ClientController.class);
 
         Scanner console = new Scanner(System.in);

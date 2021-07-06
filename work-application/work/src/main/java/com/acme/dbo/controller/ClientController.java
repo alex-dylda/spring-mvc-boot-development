@@ -2,10 +2,12 @@ package com.acme.dbo.controller;
 
 import com.acme.dbo.domain.Client;
 import com.acme.dbo.service.ClientService;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Controller;
 
 import java.util.Collection;
 
+@ComponentScan("com.acme.dbo")
 @Controller
 public class ClientController {
     private ClientService service;
