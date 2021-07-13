@@ -12,6 +12,11 @@ import java.util.Map;
 public class MapBackedClientRepository implements ClientRepository {
     private Map<Integer, Client> clients = new HashMap<>();
 
+    {
+        clients.put(0, new Client("test"));
+        clients.put(1, new Client("test2"));
+    }
+
     @Override
     public Client create(Client clientData) {
         Client newClient = new Client(clients.isEmpty() ? 0 :
